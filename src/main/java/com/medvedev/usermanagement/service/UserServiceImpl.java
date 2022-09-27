@@ -1,5 +1,4 @@
 package com.medvedev.usermanagement.service;
-
 import com.medvedev.usermanagement.dao.UserDao;
 import com.medvedev.usermanagement.model.Role;
 import com.medvedev.usermanagement.model.Status;
@@ -16,32 +15,22 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
-
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
-
     private final UserDao userDao;
-
-
     @Override
     public UserEntity getById(int id) {
         return userDao.get(id);
     }
-
-
-
     @Override
     public UserEntity save(UserEntity user) {
         return userDao.save(user);
     }
-
     @Override
     public void deleteUser(int id) {
         userDao.delete(id);
     }
-
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         UserEntity user = userDao.getByUserName(s);

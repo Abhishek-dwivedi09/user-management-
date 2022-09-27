@@ -8,9 +8,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-/**
- * created by Vladimir Medvedev 15.08.2019
- */
+
 public interface UserDataJpa extends JpaRepository<UserEntity, Integer> {
 
     List<UserEntity> getAllByRole(Role role);

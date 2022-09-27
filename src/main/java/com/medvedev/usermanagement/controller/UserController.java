@@ -1,6 +1,6 @@
 package com.medvedev.usermanagement.controller;
 
-import com.medvedev.usermanagement.model.Role;
+
 import com.medvedev.usermanagement.model.UserEntity;
 import com.medvedev.usermanagement.service.UserService;
 import com.medvedev.usermanagement.utile.ValidationUtil;
@@ -13,14 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.time.LocalDateTime;
-
-
 import static com.medvedev.usermanagement.utile.ConstantsError.PASSWORD_ERROR;
-import static com.medvedev.usermanagement.utile.ConstantsError.USER_EXIST_ERROR;
-
-/**
- * created by Vladimir Medvedev 15.08.2019
- */
 @Controller
 @RequestMapping("/user")
 @RequiredArgsConstructor
